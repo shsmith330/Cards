@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc180.saleh.sebastian.pro100projectbeta.ClassPickerController">
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc180.shawn.smith.pro100projectbeta.ClassPickerController">
    <children>
-      <Button fx:id="forwardB" layoutX="432.0" layoutY="505.0" mnemonicParsing="false" onAction="#back" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="(&gt;)" textFill="WHITE" AnchorPane.bottomAnchor="87.66666666666663" AnchorPane.rightAnchor="600.0">
+      <Button fx:id="forwardB" layoutX="432.0" layoutY="505.0" mnemonicParsing="false" onAction="#forward" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="(&gt;)" textFill="WHITE" AnchorPane.bottomAnchor="87.66666666666663" AnchorPane.rightAnchor="600.0">
          <font>
             <Font name="System Bold" size="60.0" />
          </font></Button>
-      <Button fx:id="backB" layoutX="71.0" layoutY="505.0" mnemonicParsing="false" onAction="#forward" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="(&lt;)" textFill="WHITE" AnchorPane.bottomAnchor="87.66666666666663" AnchorPane.leftAnchor="71.0">
+      <Button fx:id="backB" layoutX="71.0" layoutY="505.0" mnemonicParsing="false" onAction="#back" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="(&lt;)" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="87.66666666666663" AnchorPane.leftAnchor="71.0">
          <font>
             <Font name="System Bold" size="60.0" />
          </font></Button>
@@ -28,7 +28,7 @@
             <Font name="System Bold" size="45.0" />
          </font>
       </Label>
-      <Button fx:id="startB" layoutX="1018.0" layoutY="578.0" mnemonicParsing="false" onAction="#back" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="Play!" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <Button fx:id="startB" layoutX="1018.0" layoutY="578.0" mnemonicParsing="false" onAction="#startGame" prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: black;" text="Play!" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font name="System Bold" size="60.0" />
          </font>

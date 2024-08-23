@@ -70,11 +70,11 @@ public class HelloController {
     private ImageView playerImage = new ImageView();
 
     private boolean quit = false;
-    ChangeScene.Player testPlayer = new ChangeScene.Player(10, "TestP", 1, false);
+    public ChangeScene.Player testPlayer = new ChangeScene.Player(30, "TestP", 1, false);
     Enemy testEnemy = new Enemy(10, "TestE", false);
     ArrayList<Enemy.Card> deck = new ArrayList();
     ArrayList<Enemy.Card> hand = new ArrayList();
-    ArrayList<ImageView> handView = new ArrayList();
+    public ArrayList<ImageView> handView = new ArrayList();
     ArrayList<ImageView> ehandView = new ArrayList();
     ArrayList<Enemy.Card> ehand = new ArrayList();
 

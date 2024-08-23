@@ -1,7 +1,7 @@
 [
   {
     "name": "Squire",
-      "url":"https://github.com/M4ne55/Pro100_GoupProject/blob/583400eb98f3bfe8577d2c53c6e5e51ae14c5861/PRO100ProjectBeta/CharImages/Squire.png",
+      "url":"https://github.com/shsmith330/Cards/blob/4897cfdd88b20dedec9aca5ebf94e522464cccb5/CharImages/Squire.png",
     "id": 202,
     "description":"The Squire is a hardworking class with a very noble personality. Being just a few steps away from becoming a knight, the squire trains day in and day out to one day accomplish his dream.",
     "Attack Value":0,
@@ -12,7 +12,7 @@
   {
     "name": "Knight",
 
-      "url":"https://github.com/M4ne55/Pro100_GoupProject/blob/583400eb98f3bfe8577d2c53c6e5e51ae14c5861/PRO100ProjectBeta/CharImages/knight.jpg",
+      "url":"https://github.com/shsmith330/Cards/blob/4897cfdd88b20dedec9aca5ebf94e522464cccb5/CharImages/knight.jpg",
     "id": 203,
     "description":"Having unwavering loyalty to his homeland and Discipline that knows no bounds, the knight is a very tough and reliable class.",
     "Attack Value":0,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Tank",
-    "url":"https://github.com/M4ne55/Pro100_GoupProject/blob/583400eb98f3bfe8577d2c53c6e5e51ae14c5861/PRO100ProjectBeta/CharImages/todd-ulrich-mar7.jpg",
+    "url":"https://github.com/shsmith330/Cards/blob/4897cfdd88b20dedec9aca5ebf94e522464cccb5/CharImages/tank.jpg",
     "id": 204,
     "description":"With a body as big as a mountain and a physique tougher than the hardest metals, the tank is an absolute unit that can defend even the strongest of blows.",
     "Attack Value":0,
@@ -30,7 +30,7 @@
   },
   {
     "name": "Rogue",
-      "url":"https://github.com/M4ne55/Pro100_GoupProject/blob/583400eb98f3bfe8577d2c53c6e5e51ae14c5861/PRO100ProjectBeta/CharImages/rogue.png",
+      "url":"https://github.com/shsmith330/Cards/blob/4897cfdd88b20dedec9aca5ebf94e522464cccb5/CharImages/knight.jpg",
     "id": 205,
     "description":"As sneaky as a shadow with skillful hands that could steal the eye of a cyclops without it noticing, the rogue is agile with sticky hands.",
     "Attack Value":0,

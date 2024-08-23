@@ -17,19 +17,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ClassPickerController {
-    public ArrayList<Image> classLi=new ArrayList<>();
+    public ArrayList<String> classLi=new ArrayList<>();
     public ArrayList<String> nameLi=new ArrayList<>();
     public ArrayList<String> descLi=new ArrayList<>();
 
-    public ArrayList<Image> getClassLi() {
+    public ArrayList<String> getClassLi() {
         try {
-            Object json = new JSONParser().parse(new FileReader("C:\\Users\\shsmith\\Workspace\\Pro100_GoupProject\\PRO100ProjectBeta\\data\\class.json"));
-            //System.out.println("fileReaderWorked");
+            Object json = new JSONParser().parse(new FileReader("data/class.json"));
+            System.out.println("fileReaderWorked");
             JSONArray jsonA = (JSONArray) json;
             for (int i = 0; i < jsonA.size(); i++) {
                 JSONObject customerR = (JSONObject) jsonA.get(i);
                // System.out.println("json object Created");
-                classLi.add(new Image((String) customerR.get("url")));
+                classLi.add(customerR.get("url").toString() );
                // System.out.println("image created");
             }
         } catch (FileNotFoundException e) {
@@ -39,12 +39,11 @@ public class ClassPickerController {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(classLi);
         return classLi;
     }
     public ArrayList<String> getNameLi() {
         try {
-            Object json = new JSONParser().parse(new FileReader("C:\\Users\\shsmith\\Workspace\\Pro100_GoupProject\\PRO100ProjectBeta\\data\\class.json"));
+            Object json = new JSONParser().parse(new FileReader("data/class.json"));
             System.out.println("fileReaderWorked2");
 
             JSONArray jsonA = (JSONArray) json;
@@ -60,12 +59,12 @@ public class ClassPickerController {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(nameLi);
+
         return nameLi;
     }
     public ArrayList<String> getDescLi() {
         try {
-            Object json = new JSONParser().parse(new FileReader("C:\\Users\\shsmith\\Workspace\\Pro100_GoupProject\\PRO100ProjectBeta\\data\\class.json"));
+            Object json = new JSONParser().parse(new FileReader("data/class.json"));
             //System.out.println("made it");
             JSONArray jsonA = (JSONArray) json;
             for (int i = 0; i < jsonA.size(); i++) {
@@ -75,19 +74,19 @@ public class ClassPickerController {
         } catch (IOException | ParseException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(descLi);
+
         return descLi;
     }
-    public int arrayIterator=0;
+    public int arrayIterator;
 
     @FXML
-    private Button backButton;
+    private Button backB;
 
     @FXML
     private Label descriptionLabel;
 
     @FXML
-    private Button forwardsButton;
+    private Button forwardB;
 
     @FXML
     private Label className;
@@ -102,14 +101,31 @@ public class ClassPickerController {
     public ImageView charImage;
 
 
-//    @FXML
-//    public void startGame(ActionEvent event) throws IOException, ParseException {
-//        System.out.println("hit");
-//
-//
-//        HelloController hc=ChangeScene.changeSceneRC(event, "hello-view.fxml");
-//        hc.gameStart();
-//    }
+    @FXML
+    public void startGame(ActionEvent event) throws IOException, ParseException {
+        System.out.println("hit");
+
+
+        HelloController hc=ChangeScene.changeSceneRC(event, "hello-view.fxml");
+
+        switch (arrayIterator){
+            case 0:
+                hc.testPlayer=new ChangeScene.Player(20,"Squire", 0, false);
+                break;
+                case 1:
+                    hc.testPlayer=new ChangeScene.Player(25,"Knight", 1, false);
+                    break;
+                    case 2:
+                        hc.testPlayer=new ChangeScene.Player(30,"Tank", 2, false);
+                        break;
+                        case 3:
+                            hc.testPlayer=new ChangeScene.Player(15,"Rogue", 3, false);
+                            break;
+
+        }
+        hc.gameStart();
+
+    }
 
 //    @FXML
 //    public void testit(ActionEvent event) throws IOException, ParseException {
@@ -119,20 +135,20 @@ public class ClassPickerController {
 //    }
     @FXML
     protected void back(ActionEvent event) throws IOException {
-        if (classLi.size()==0&&nameLi.size()==0&&descLi.size()==0) {
-            getClassLi();
-            getDescLi();
-            getNameLi();
-        }
+        System.out.println(descLi);
+        System.out.println(classLi);
+        System.out.println(nameLi);
+
+
         arrayIterator--;
     try {
      if(arrayIterator<0) {
          arrayIterator=3;
-        charImage.setImage(classLi.get(arrayIterator));
+        charImage.setImage(new Image(classLi.get(arrayIterator)));
         className.setText(nameLi.get(arrayIterator));
         descriptionLabel.setText(descLi.get(arrayIterator));
      }else {
-        charImage.setImage(classLi.get(arrayIterator));
+        charImage.setImage(new Image(classLi.get(arrayIterator)));
         className.setText(nameLi.get(arrayIterator));
         descriptionLabel.setText(descLi.get(arrayIterator));
     }
@@ -148,22 +164,27 @@ public class ClassPickerController {
     }
     @FXML
     protected void forward(ActionEvent event) throws IOException, IndexOutOfBoundsException {
-        arrayIterator++;
-        if (classLi.size() == 0 && nameLi.size() == 0 && descLi.size() == 0) {
+        if (classLi.isEmpty()) {
             getClassLi();
             getDescLi();
             getNameLi();
         }
+        System.out.println(descLi);
+        System.out.println(classLi);
+        System.out.println(nameLi);
+        backB.setVisible(true);
+        arrayIterator++;
+
         try {
             if (arrayIterator > 3) {
                 arrayIterator = 0;
-                charImage.setImage(classLi.get(arrayIterator));
+                charImage.setImage(new Image(classLi.get(arrayIterator)));
                 className.setText(nameLi.get(arrayIterator));
                 descriptionLabel.setText(descLi.get(arrayIterator));
             } else {
-                charImage.setImage(classLi.get(arrayIterator));
+                charImage.setImage(new Image(classLi.get(arrayIterator)));
                 className.setText(nameLi.get(arrayIterator));
-                descriptionLabel.setText(getDescLi().get(arrayIterator));
+                descriptionLabel.setText(descLi.get(arrayIterator));
             }
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();

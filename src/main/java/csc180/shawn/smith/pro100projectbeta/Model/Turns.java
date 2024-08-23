@@ -5,7 +5,8 @@
 
 package csc180.shawn.smith.pro100projectbeta.Model;
 
-import csc180.saleh.sebastian.pro100projectbeta.HelloController;
+
+import csc180.shawn.smith.pro100projectbeta.HelloController;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
