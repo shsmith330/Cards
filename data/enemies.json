@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Goblin",
+    "image": {
+      "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/EnemyImages/goblin.jpg",
+      "width": 155,
+      "height": 137
+    },
+    "id": 101,
+    "isAggressive": true,
+    "hp": 10
+  },
+  {
+    "name": "Knight",
+    "image": {
+      "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/EnemyImages/knight.jpg",
+      "width": 155,
+      "height": 137
+    },
+    "id": 102,
+    "isAggressive": true,
+    "hp": 20
+  },
+  {
+    "name": "Kobold",
+    "image": {
+      "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/EnemyImages/kobold.jpg",
+      "width": 155,
+      "height": 137
+    },
+    "id": 103,
+    "isAggressive": true,
+    "hp": 15
+  },
+  {
+    "name": "Rodent",
+    "image": {
+      "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/EnemyImages/rodent.jpg",
+      "width": 155,
+      "height": 137
+    },
+    "id": 104,
+    "isAggressive": true,
+    "hp": 5
+  }
+]
