@@ -1,126 +1,126 @@
 [
   {
     "name": "Slash",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/slash.png",
+    "url": "CardImages/slash.png",
     "id": 1,
     "isAttack": true,
     "value": 2
   },
   {
     "name": "Guard",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/b61d45efb034e13d71f8480c19829dbca66c76a7/Tragic/CardImages!!!/CardGuard.png",
+    "url": "CardImages/CardGuard.png",
     "id": 2,
     "isAttack": false,
     "value": 1
   },
   {
     "name": "Defend",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/defend.png",
+    "url": "defend.png",
     "id": 3,
     "isAttack": false,
     "value": 2
   },
   {
     "name": "Steadfast",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/steadfast.png",
+    "url": "CardImages/steadfast.png",
     "id": 4,
     "isAttack": false,
     "value": 3
   },
   {
     "name": "Pierce",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/pierce.png",
+    "url": "CardImages/pierce.png",
     "id": 5,
     "isAttack": true,
     "value": 3
   },
   {
     "name": "Scythe Strike",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/SStrike.png",
+    "url": "CardImages/SStrike.png",
     "id": 6,
     "isAttack": true,
     "value": 3
   },
   {
     "name": "Stone Skin",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/SSkin.png",
+    "url": "CardImages/SSkin.png",
     "id": 7,
     "isAttack": false,
     "value": 3
   },
   {
     "name": "Spear Charge",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/SCharge.png",
+    "url": "CardImages/SCharge.png",
     "id": 8,
     "isAttack": true,
     "value": 3
   },
   {
     "name": "Mystic Armor",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/MysticArmor.png",
+    "url": "CardImages/MysticArmor.png",
     "id": 9,
     "isAttack": false,
     "value": 5
   },
   {
     "name": "Mine Turtle",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/MTurtle.png",
+    "url": "CardImages/MTurtle.png",
     "id": 10,
     "isAttack": true,
     "value": 1
   },
   {
     "name": "Magic Barrier",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/MBarrier.png",
+    "url": "CardImages/MBarrier.png",
     "id": 11,
     "isAttack": false,
     "value": 5
   },
   {
     "name": "Crabo Stabbo",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/CKnife.png",
+    "url": "CardImages/CKnife.png",
     "id": 12,
     "isAttack": true,
     "value": 1
   },
   {
     "name": "Enchanted Arrow",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/EArrow.png",
+    "url": "CardImages/EArrow.png",
     "id": 13,
     "isAttack": true,
     "value": 2
   },
   {
     "name": "Flame Shield",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/FShield.png",
+    "url": "CardImages/FShield.png",
     "id": 14,
     "isAttack": false,
     "value": 4
   },
   {
     "name": "Distant Strike",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/Longbow.png",
+    "url": "CardImages/Longbow.png",
     "id": 15,
     "isAttack": true,
     "value": 3
   },
   {
     "name": "Knight's Stance",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/wawewaewae.png",
+    "url": "CardImages/wawewaewae.png",
     "id": 16,
     "isAttack": false,
     "value": 2
   },
   {
     "name": "Inferno",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/Inferno.png",
+    "url": "CardImages/Inferno.png",
     "id": 17,
     "isAttack": true,
     "value": 4
   },
   {
     "name": "Baby with a gun",
-    "url": "https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/CardImages!!!/BGun.png",
+    "url": "CardImages/BGun.png",
     "id": 18,
     "isAttack": true,
     "value": 10

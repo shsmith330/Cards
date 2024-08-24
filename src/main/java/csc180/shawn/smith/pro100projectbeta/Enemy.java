@@ -8,6 +8,7 @@ package csc180.shawn.smith.pro100projectbeta;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Enemy {
@@ -145,8 +146,7 @@ public class Enemy {
             this.setIsattack((Boolean)jsObject.get("isAttack"));
             long v=(Long)jsObject.get("value");
             this.setDescription(String.valueOf(v));
-            JSONObject b= (JSONObject) jsObject.get("image");
-            this.image=setImage((String) b.get("url"));
+            this.image=setImage((String) jsObject.get("url"));
         }
 
         @Override

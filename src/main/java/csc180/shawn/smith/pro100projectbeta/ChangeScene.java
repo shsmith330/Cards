@@ -17,7 +17,7 @@ public class ChangeScene {
     private static Stage stage;
 
     public static void changeScene(Event event, String strFXMLFileName) throws IOException {
-        URL url = new File("src/main/java/csc180/saleh/sebastian/pro100projectbeta/"+
+        URL url = new File("src/main/java/csc180/shawn/smith/pro100projectbeta/"+
                 strFXMLFileName).toURI().toURL();
         Parent root = FXMLLoader.load(url);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -27,7 +27,7 @@ public class ChangeScene {
     }
 
     public static <T> T changeSceneRC(Event event, String strFXMLFileName) throws IOException {
-        URL url = new File("src/main/java/csc180/saleh/sebastian/pro100projectbeta/"+
+        URL url = new File("src/main/java/csc180/shawn/smith/pro100projectbeta/"+
                 strFXMLFileName).toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         Parent root = loader.load();
@@ -40,7 +40,7 @@ public class ChangeScene {
     }
 
     public static <T> T changeSceneSimple(String strFXMLFileName) throws IOException, URISyntaxException {
-        URL url = new File("src/main/java/csc180/saleh/sebastian/pro100projectbeta/"+
+        URL url = new File("src/main/java/csc180/shawn/smith/pro100projectbeta/"+
                 strFXMLFileName).toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         Parent root = loader.load();

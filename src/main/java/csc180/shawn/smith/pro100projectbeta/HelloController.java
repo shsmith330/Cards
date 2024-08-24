@@ -7,11 +7,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -21,55 +23,56 @@ import java.util.*;
 
 public class HelloController {
 
-    @FXML
-    private ImageView eCard0 = new ImageView();
+        @FXML
+        private ImageView eCard0;
 
-    @FXML
-    private ImageView eCard1 = new ImageView();
+        @FXML
+        private ImageView eCard1;
 
-    @FXML
-    private ImageView eCard2 = new ImageView();
+        @FXML
+        private ImageView eCard2;
 
-    @FXML
-    private ImageView eCard3 = new ImageView();
+        @FXML
+        private ImageView eCard3;
 
-    @FXML
-    private ImageView eCard4 = new ImageView();
+        @FXML
+        private ImageView eCard4;
 
-    @FXML
-    private Label eHealth = new Label();
+        @FXML
+        private Label eHealth;
 
-    @FXML
-    private ProgressBar enemyHPBar;
+        @FXML
+        private ProgressBar enemyHPBar;
 
-    @FXML
-    private ImageView enemyImage;
+        @FXML
+        private ImageView enemyImage;
 
-    @FXML
-    private ImageView pCard0 = new ImageView();
+        @FXML
+        private ImageView pCard0;
 
-    @FXML
-    private ImageView pCard1 = new ImageView();
+        @FXML
+        private ImageView pCard1;
 
-    @FXML
-    private ImageView pCard2 = new ImageView();
+        @FXML
+        private ImageView pCard2;
 
-    @FXML
-    private ImageView pCard3 = new ImageView();
+        @FXML
+        private ImageView pCard3;
 
-    @FXML
-    private ImageView pCard4 = new ImageView();
+        @FXML
+        private ImageView pCard4;
 
-    @FXML
-    private Label pHealth = new Label();
+        @FXML
+        private Label pHealth;
 
-    @FXML
-    private ProgressBar playerHPBar;
+        @FXML
+        private ProgressBar playerHPBar;
 
-    @FXML
-    private ImageView playerImage = new ImageView();
+        @FXML
+        private ImageView playerImage;
 
-    private boolean quit = false;
+
+        private boolean quit = false;
     public ChangeScene.Player testPlayer = new ChangeScene.Player(30, "TestP", 1, false);
     Enemy testEnemy = new Enemy(10, "TestE", false);
     ArrayList<Enemy.Card> deck = new ArrayList();
@@ -91,7 +94,6 @@ public class HelloController {
     public void init() throws IOException, ParseException {
         int amount = 20;
         int handSize = 5;
-        playerImage.setImage(new Image("https://github.com/M4ne55/Pro100_GoupProject/blob/b61d45efb034e13d71f8480c19829dbca66c76a7/Tragic/CardImages!!!/CardGuard.png"));
         PrintStream var10000 = System.out;
         String var10001 = this.testPlayer.getName();
         var10000.println(var10001 + "             " + this.testEnemy.getName() + "\nHP: " + this.testPlayer.getHp() + "             HP: " + this.testEnemy.getHp() + "\nSheild: " + this.testPlayer.getSheildCount() + "             Sheild: " + this.testEnemy.getSheildCount() + "\n\n");
@@ -109,13 +111,18 @@ public class HelloController {
         handView.add(pCard2);
         handView.add(pCard3);
         handView.add(pCard4);
-        pCard0.setImage(new Image(hand.get(0).getImage()));
-        pCard1.setImage(new Image(hand.get(1).getImage()));
-        pCard2.setImage(new Image(hand.get(2).getImage()));
-        pCard3.setImage(new Image(hand.get(3).getImage()));
-        pCard4.setImage(new Image(hand.get(4).getImage()));
+        var img = new Image(grabImage(hand.get(0).getImage()));
+        pCard0.setImage(img);
+        pCard1.setImage(new Image(grabImage(hand.get(1).getImage())));
+        pCard2.setImage(new Image(grabImage(hand.get(2).getImage())));
+        pCard3.setImage(new Image(grabImage(hand.get(3).getImage())));
+        pCard4.setImage(new Image(grabImage(hand.get(4).getImage())));
     }
 
+    public String grabImage(String s){
+        File f=new File(s);
+        return f.toURI().toString();
+    }
     @FXML
     private void seteHand() {
         ehandView.add(eCard0);
@@ -123,11 +130,11 @@ public class HelloController {
         ehandView.add(eCard2);
         ehandView.add(eCard3);
         ehandView.add(eCard4);
-        eCard0.setImage(new Image(ehand.get(0).getImage()));
-        eCard1.setImage(new Image(ehand.get(1).getImage()));
-        eCard2.setImage(new Image(ehand.get(2).getImage()));
-        eCard3.setImage(new Image(ehand.get(3).getImage()));
-        eCard4.setImage(new Image(ehand.get(4).getImage()));
+        eCard0.setImage(new Image(grabImage(ehand.get(0).getImage())));
+        eCard1.setImage(new Image(grabImage(ehand.get(1).getImage())));
+        eCard2.setImage(new Image(grabImage(ehand.get(2).getImage())));
+        eCard3.setImage(new Image(grabImage(ehand.get(3).getImage())));
+        eCard4.setImage(new Image(grabImage(ehand.get(4).getImage())));
     }
 
     public void collectCards(ArrayList<Enemy.Card> collection, int size) throws IOException, ParseException {
@@ -136,7 +143,7 @@ public class HelloController {
                 Random rand = new Random();
                 int r = rand.nextInt(18);
                 Object json = null;
-                json = (new JSONParser()).parse(new FileReader("src/main/data/cards.json"));
+                json = (new JSONParser()).parse(new FileReader("data/cards.json"));
                 JSONArray jsonA = (JSONArray) json;
                 JSONObject cards = (JSONObject) jsonA.get(r);
                 Random rand1 = new Random();
@@ -167,21 +174,21 @@ public class HelloController {
         }
     }
 
-    public void drawMenu(ActionEvent event) throws IOException, ParseException, URISyntaxException {
-        while (!this.quit) {
+    @FXML
+    public void drawMenu(MouseEvent event) throws IOException, ParseException, URISyntaxException {
             this.attackCard();
             Random rand = new Random();
-            String choice = event.getSource().toString();
+            Object object = event.getSource();
+           String choice=String.valueOf(getIndex(object,handView));
             if (choice.isEmpty()) {
                 OpponentTurn();
             }
-
             if (!this.quit) {
                 int intChoice = Integer.parseInt(choice);
                 int cv;
                 int left;
-                if ((this.hand.get(intChoice - 1)).isIsattack()) {
-                    cv = Integer.parseInt(((Enemy.Card) this.hand.get(intChoice - 1)).getValue());
+                if ((this.hand.get(intChoice)).isIsattack()) {
+                    cv = Integer.parseInt(((Enemy.Card) this.hand.get(intChoice)).getValue());
                     if (this.testEnemy.getSheildCount() > 0) {
                         this.testEnemy.setSheildCount(this.testEnemy.getSheildCount() - cv);
                         if (this.testEnemy.getSheildCount() < 0) {
@@ -197,17 +204,24 @@ public class HelloController {
                             this.testEnemy.setHp(0);
                         }
                     }
-                } else if (!(this.hand.get(intChoice - 1)).isIsattack()) {
-                    cv = Integer.parseInt((this.hand.get(intChoice - 1)).getValue());
+                } else if (!(this.hand.get(intChoice)).isIsattack()) {
+                    cv = Integer.parseInt((this.hand.get(intChoice)).getValue());
                     left = this.testPlayer.getSheildCount();
                     this.testPlayer.setSheildCount(left + cv);
                 }
-                System.out.println(this.hand.get(intChoice - 1).getName());
-                this.hand.remove(intChoice - 1);
+                System.out.println(this.hand.get(intChoice).getName());
+                this.hand.remove(intChoice);
                 winCodition();
             }
-        }
+    }
 
+    private int getIndex(Object object, ArrayList<ImageView> handView) {
+        for (int i = 0; i < handView.size(); i++) {
+            if (object.equals(handView.get(i)) ) {
+                return i;
+            }
+        }
+        return 0;
     }
 
     @FXML
@@ -247,37 +261,33 @@ public class HelloController {
     @FXML
     public void winCodition() throws IOException, ParseException, URISyntaxException {
         if (this.testPlayer.getHp() <= 0) {
-            this.init();
+            //this.init();
             System.out.println("Enemy Wins");
             this.quit = true;
             Turns.setQuit(true);
         } else if (this.testEnemy.getHp() <= 0) {
-            this.init();
+          //  this.init();
             System.out.println("Player Wins");
             this.quit = true;
             Turns.setQuit(true);
-
         } else {
-            new Turns().run();
+            new Turns(this).run();
         }
     }
 
     @FXML
     public void gameStart() throws IOException, ParseException {
-        new Turns().start();
+        new Turns(this).start();
     }
 
     public static class Turns extends TimerTask {
         private static int timedTurn = 0;
         private static HelloController c;
 
-        static {
-            c = new HelloController();
-        }
-
         private static boolean quit = false;
 
-        public Turns() {
+        public Turns(HelloController c) {
+            this.c = c;
         }
 
         public static void setQuit(boolean quit) {
@@ -326,7 +336,7 @@ public class HelloController {
                         } else {
                             t.cancel();
                             try {
-                                ChangeScene.changeSceneSimple("EndScreen.fxml");
+                                ChangeScene.changeSceneSimple("Characters.fxml");
                             } catch (Exception e) {
                                 throw new RuntimeException(e);
                             }

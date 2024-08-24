@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc180.shawn.smith.pro100projectbeta.HelloController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#676767" height="200.0" layoutX="974.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="304.0" AnchorPane.bottomAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="248.66666666666669" />
@@ -27,24 +34,25 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="pCard0" fitHeight="260.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM">
+            <ImageView fx:id="pCard0" fitHeight="233.0" fitWidth="160.0" onMouseClicked="#drawMenu" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="SOMETIMES" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
+               <image>
+                  <Image url="@../../../../../../../CardImages/BGun.png" />
+               </image>
             </ImageView>
-            <ImageView fx:id="pCard1" fitHeight="260.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-            <ImageView fx:id="pCard2" fitHeight="260.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-            <ImageView fx:id="pCard3" fitHeight="260.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-            <ImageView fx:id="pCard4" fitHeight="260.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <ImageView fx:id="pCard1" fitHeight="260.0" fitWidth="160.0" onMouseClicked="#drawMenu" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <ImageView fx:id="pCard2" fitHeight="260.0" fitWidth="160.0" onMouseClicked="#drawMenu" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <ImageView fx:id="pCard3" fitHeight="260.0" fitWidth="160.0" onMouseClicked="#drawMenu" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <ImageView fx:id="pCard4" fitHeight="260.0" fitWidth="160.0" onMouseClicked="#drawMenu" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
          </children>
       </GridPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#676767" height="110.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#676767" height="110.0" layoutY="610.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <AnchorPane layoutX="-1.0" layoutY="518.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-28.0" AnchorPane.leftAnchor="-28.0">
          <children>
             <ImageView fx:id="playerImage" fitHeight="137.0" fitWidth="155.0" layoutX="23.0" layoutY="32.0" pickOnBounds="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="32.0">
                <image>
-                  <Image url="https://github.com/M4ne55/Pro100_GoupProject/blob/8916480d92cb26710a72888ee5f6a1a65bf8d11d/PRO100ProjectBeta/EnemyImages/knight.jpg" />
+                  <Image url="@../../../../../../../CharImages/knight.jpg" />
                </image>
             </ImageView>
             <Circle fill="#1f93ff00" layoutX="101.0" layoutY="100.0" radius="106.0" stroke="#4c4c4c" strokeType="INSIDE" strokeWidth="40.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="-6.0" />

@@ -11,6 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -108,23 +109,22 @@ public class ClassPickerController {
 
         HelloController hc=ChangeScene.changeSceneRC(event, "hello-view.fxml");
 
-        switch (arrayIterator){
-            case 0:
-                hc.testPlayer=new ChangeScene.Player(20,"Squire", 0, false);
-                break;
-                case 1:
-                    hc.testPlayer=new ChangeScene.Player(25,"Knight", 1, false);
-                    break;
-                    case 2:
-                        hc.testPlayer=new ChangeScene.Player(30,"Tank", 2, false);
-                        break;
-                        case 3:
-                            hc.testPlayer=new ChangeScene.Player(15,"Rogue", 3, false);
-                            break;
-
-        }
+//        switch (arrayIterator){
+//            case 0:
+//                hc.testPlayer=new ChangeScene.Player(20,"Squire", 0, false);
+//                break;
+//                case 1:
+//                    hc.testPlayer=new ChangeScene.Player(25,"Knight", 1, false);
+//                    break;
+//                    case 2:
+//                        hc.testPlayer=new ChangeScene.Player(30,"Tank", 2, false);
+//                        break;
+//                        case 3:
+//                            hc.testPlayer=new ChangeScene.Player(15,"Rogue", 3, false);
+//                            break;
+//
+//        }
         hc.gameStart();
-
     }
 
 //    @FXML
@@ -142,16 +142,22 @@ public class ClassPickerController {
 
         arrayIterator--;
     try {
-     if(arrayIterator<0) {
-         arrayIterator=3;
-        charImage.setImage(new Image(classLi.get(arrayIterator)));
-        className.setText(nameLi.get(arrayIterator));
-        descriptionLabel.setText(descLi.get(arrayIterator));
-     }else {
-        charImage.setImage(new Image(classLi.get(arrayIterator)));
-        className.setText(nameLi.get(arrayIterator));
-        descriptionLabel.setText(descLi.get(arrayIterator));
-    }
+        if (arrayIterator > 3) {
+            arrayIterator = 0;
+            String s=classLi.get(arrayIterator);
+            File f= new File(s);
+            String uri=f.toURI().toString();
+            charImage.setImage(new Image(uri));
+            className.setText(nameLi.get(arrayIterator));
+            descriptionLabel.setText(descLi.get(arrayIterator));
+        } else {
+            String s=classLi.get(arrayIterator);
+            File f= new File(s);
+            String uri=f.toURI().toString();
+            charImage.setImage(new Image(uri));
+            className.setText(nameLi.get(arrayIterator));
+            descriptionLabel.setText(descLi.get(arrayIterator));
+        }
 
     }catch (IndexOutOfBoundsException e) {
         e.printStackTrace();
@@ -178,11 +184,17 @@ public class ClassPickerController {
         try {
             if (arrayIterator > 3) {
                 arrayIterator = 0;
-                charImage.setImage(new Image(classLi.get(arrayIterator)));
+                String s=classLi.get(arrayIterator);
+                File f= new File(s);
+                String uri=f.toURI().toString();
+                charImage.setImage(new Image(uri));
                 className.setText(nameLi.get(arrayIterator));
                 descriptionLabel.setText(descLi.get(arrayIterator));
             } else {
-                charImage.setImage(new Image(classLi.get(arrayIterator)));
+                String s=classLi.get(arrayIterator);
+                File f= new File(s);
+                String uri=f.toURI().toString();
+                charImage.setImage(new Image(uri));
                 className.setText(nameLi.get(arrayIterator));
                 descriptionLabel.setText(descLi.get(arrayIterator));
             }

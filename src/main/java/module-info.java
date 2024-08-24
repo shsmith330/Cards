@@ -2,6 +2,7 @@ module csc180.shawn.smith.cards {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires java.desktop;
 
 
     opens csc180.shawn.smith.pro100projectbeta to javafx.fxml;
