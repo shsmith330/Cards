@@ -78,7 +78,7 @@ public class ClassPickerController {
 
         return descLi;
     }
-    public int arrayIterator;
+    public int arrayIterator=0;
 
     @FXML
     private Button backB;
