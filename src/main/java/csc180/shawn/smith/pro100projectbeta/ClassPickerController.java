@@ -139,7 +139,6 @@ public class ClassPickerController {
         System.out.println(classLi);
         System.out.println(nameLi);
 
-
         arrayIterator--;
     try {
         if (arrayIterator > 3) {
@@ -162,10 +161,6 @@ public class ClassPickerController {
     }catch (IndexOutOfBoundsException e) {
         e.printStackTrace();
     }
-
-
-
-
 
     }
     @FXML
