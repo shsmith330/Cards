@@ -150,6 +150,9 @@ public class ClassPickerController {
             className.setText(nameLi.get(arrayIterator));
             descriptionLabel.setText(descLi.get(arrayIterator));
         } else {
+            if(arrayIterator==-1){
+                arrayIterator=3;
+            }
             String s=classLi.get(arrayIterator);
             File f= new File(s);
             String uri=f.toURI().toString();
