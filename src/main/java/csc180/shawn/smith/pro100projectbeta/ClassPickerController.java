@@ -85,6 +85,8 @@ public class ClassPickerController {
 
     @FXML
     private Label descriptionLabel;
+    @FXML
+    private Button startB;
 
     @FXML
     private Button forwardB;
@@ -92,8 +94,7 @@ public class ClassPickerController {
     @FXML
     private Label className;
 
-    @FXML
-    private Button startButton;
+
 
     @FXML
     private Button testButton;
@@ -108,23 +109,23 @@ public class ClassPickerController {
 
 
         HelloController hc=ChangeScene.changeSceneRC(event, "hello-view.fxml");
-
-//        switch (arrayIterator){
-//            case 0:
-//                hc.testPlayer=new ChangeScene.Player(20,"Squire", 0, false);
-//                break;
-//                case 1:
-//                    hc.testPlayer=new ChangeScene.Player(25,"Knight", 1, false);
-//                    break;
-//                    case 2:
-//                        hc.testPlayer=new ChangeScene.Player(30,"Tank", 2, false);
-//                        break;
-//                        case 3:
-//                            hc.testPlayer=new ChangeScene.Player(15,"Rogue", 3, false);
-//                            break;
-//
-//        }
         hc.gameStart();
+        switch (arrayIterator){
+            case 0:
+                hc.testPlayer=new ChangeScene.Player(20,"Squire", 0, false);
+                break;
+                case 1:
+                    hc.testPlayer=new ChangeScene.Player(25,"Knight", 1, false);
+                    break;
+                    case 2:
+                        hc.testPlayer=new ChangeScene.Player(30,"Tank", 2, false);
+                        break;
+                        case 3:
+                            hc.testPlayer=new ChangeScene.Player(15,"Rogue", 3, false);
+                            break;
+
+        }
+
     }
 
 //    @FXML
