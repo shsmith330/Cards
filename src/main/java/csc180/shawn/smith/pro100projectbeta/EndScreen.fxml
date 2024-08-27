@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-image: url(https://github.com/M4ne55/Pro100_GoupProject/blob/c39b6d247e85fb36f9523f8969c1edef940b9271/PRO100ProjectBeta/src/main/data/360_F_606510500_h2XawF0YOpA9HoLhECVl0uoXJk2DC3GI.jpg); -fx-background-repeat: no-repeat, repeat; -fx-background-size: cover;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-image: url(https://github.com/shsmith330/Cards/blob/master/data/360_F_606510500_h2XawF0YOpA9HoLhECVl0uoXJk2DC3GI.jpg?raw=true); -fx-background-repeat: no-repeat, repeat; -fx-background-size: cover;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="endCharacterImage" fitHeight="351.0" fitWidth="507.0" layoutX="61.0" layoutY="44.0" pickOnBounds="true" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="44.0">
          <image>
